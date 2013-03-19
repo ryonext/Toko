@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Toko::Application.config.secret_key_base = 'c6ad33d28605dc6da8c41bb6d5447ad956e9ffa7d5350ec4ef5b9677a2c6a495191afd5c518c2722d9dc5d9f29e94af1281821a8973305534bf9f7fd1ab37f9b'
+Toko::Application.config.secret_key_base = Settings.secret

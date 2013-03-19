@@ -39,3 +39,5 @@ gem 'pg', group: :production
 
 # To use debugger
 # gem 'debugger'
+
+gem 'rails_config'

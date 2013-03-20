@@ -41,3 +41,7 @@ gem 'pg', group: :production
 # gem 'debugger'
 
 gem 'rails_config'
+
+group :development, :test do
+  gem 'rspec-rails'
+end

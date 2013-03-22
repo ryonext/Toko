@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Toko::Application.config.secret_key_base = ENV['securet'] || Settings.secret
+Toko::Application.config.secret_key_base = ENV['secret'] || Settings.secret

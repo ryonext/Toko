@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context "new User" do
+    subject { User.new }
+    its(:workspaces){ should be_empty }
+  end
 end

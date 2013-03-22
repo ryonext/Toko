@@ -44,6 +44,9 @@ gem 'rails_config'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-debugger'
 end
 
 gem 'flat-ui-rails'

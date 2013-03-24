@@ -25,24 +25,22 @@ html lang="en"
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.brand href="#"Toko
+          a.brand href="/"Toko
           .container-fluid.nav-collapse
             ul.nav
-              li= link_to "Link 1", "/path1"
-              li= link_to "Link 2", "/path2"
-              li= link_to "Link 3", "/path3"
+              li= link_to "create", "#"
 
     .container-fluid
 
       .row-fluid
-        .span3
+        .span2
           .well.sidebar-nav
             ul.nav.nav-list
-              li.nav-header Sidebar
-              li= link_to "Link 1", "/path1"
-              li= link_to "Link 2", "/path2"
-              li= link_to "Link 3", "/path3"
-        .span9
+              li.nav-header your workspace
+              li= link_to "workspace1", "#"
+              li= link_to "workspace2", "#"
+              li= link_to "workspace3", "#"
+        .span10
           = bootstrap_flash
           = yield
     

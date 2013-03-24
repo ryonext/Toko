@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @workspace.name
+p
+  strong Owner:
+  = @workspace.owner_id
+
+= link_to 'Edit', edit_workspace_path(@workspace)
+'|
+= link_to 'Back', workspaces_path

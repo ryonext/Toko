@@ -4,8 +4,8 @@ p
   strong Name:
   = @workspace.name
 p
-  strong Owner:
-  = @workspace.owner_id
+  strong Upload url:
+  = link_to url_for(guests_upload_workspace_url(@workspace)), guests_upload_workspace_path(@workspace)
 
 table.table
   th no
@@ -23,6 +23,6 @@ table.table
       td 
         = w.creator
       td
-        = w.original
+        = link_to 'download', url_for(w.original.url)
       td
         = w.created_at

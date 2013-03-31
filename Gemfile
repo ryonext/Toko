@@ -56,3 +56,4 @@ gem 'slim-rails'
 gem 'therubyracer'
 gem 'carrierwave'
 gem 'sorcery'
+gem 'protected_attributes' # for sorcery

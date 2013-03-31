@@ -4,8 +4,9 @@ class SessionController < ApplicationController
   end
   
   def create
-    user = login(params[:email], params[:password],
+    user = login(params[:username], params[:password],
       params[:remember_me])
+    binding.pry
     if user
       redirect_back_or_to root_url, :notice => "Logged in!"
     else

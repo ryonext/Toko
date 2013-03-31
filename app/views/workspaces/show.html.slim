@@ -11,8 +11,8 @@ table.table
   th no
   th name
   th creator
-  th original
   th created
+  th 
 
   - @workspace.works.each_with_index do |w, i|
     tr
@@ -23,6 +23,6 @@ table.table
       td 
         = w.creator
       td
-        = link_to 'download', url_for(w.original.url)
-      td
         = w.created_at
+      td
+        = link_to 'download', url_for(w.original.url)

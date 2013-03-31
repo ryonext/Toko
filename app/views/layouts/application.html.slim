@@ -37,9 +37,9 @@ html lang="en"
           .well.sidebar-nav
             ul.nav.nav-list
               li.nav-header your workspace
-              li= link_to "workspace1", "#"
-              li= link_to "workspace2", "#"
-              li= link_to "workspace3", "#"
+              - if @workspaces != nil
+                - @workspaces.each do |w|
+                  li= link_to w.name, workspace_path(w)
         .span10
           = bootstrap_flash
           = yield

@@ -9,14 +9,20 @@ p
 
 table.table
   th no
+  th name
   th creator
   th original
+  th created
 
   - @workspace.works.each_with_index do |w, i|
     tr
       td
         = i+1
+      td
+        = w.name
       td 
-        = w
+        = w.creator
       td
         = w.original
+      td
+        = w.created_at

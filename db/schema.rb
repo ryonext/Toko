@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20130331102013) do
     t.datetime "updated_at"
   end
 
+  add_index "users", ["username"], name: "index_users_on_username", unique: true
+
   create_table "works", force: true do |t|
     t.integer  "workspace_id"
     t.string   "name"

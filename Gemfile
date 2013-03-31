@@ -47,6 +47,7 @@ group :development, :test do
   gem 'pry'
   gem 'pry-rails'
   gem 'pry-debugger'
+  gem 'turnip'
 end
 
 gem 'flat-ui-rails'

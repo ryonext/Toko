@@ -1,12 +1,6 @@
 class WorkspacesController < ApplicationController
   before_action :set_workspace, only: [:show, :edit, :update, :destroy]
 
-  # GET /workspaces
-  # GET /workspaces.json
-  def index
-    @workspaces = Workspace.all
-  end
-
   # GET /workspaces/1
   # GET /workspaces/1.json
   def show
@@ -15,10 +9,6 @@ class WorkspacesController < ApplicationController
   # GET /workspaces/new
   def new
     @workspace = Workspace.new
-  end
-
-  # GET /workspaces/1/edit
-  def edit
   end
 
   # POST /workspaces
@@ -34,30 +24,6 @@ class WorkspacesController < ApplicationController
         format.html { render action: 'new' }
         format.json { render json: @workspace.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  # PATCH/PUT /workspaces/1
-  # PATCH/PUT /workspaces/1.json
-  def update
-    respond_to do |format|
-      if @workspace.update(workspace_params)
-        format.html { redirect_to @workspace, notice: 'Workspace was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @workspace.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /workspaces/1
-  # DELETE /workspaces/1.json
-  def destroy
-    @workspace.destroy
-    respond_to do |format|
-      format.html { redirect_to workspaces_url }
-      format.json { head :no_content }
     end
   end
 

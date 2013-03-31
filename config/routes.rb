@@ -1,14 +1,15 @@
 Toko::Application.routes.draw do
-  get "guests/upload"
-  resources :works
-
   get "welcome/index"
 
-  resources :workspaces do
+  resources :workspaces, :only => [:new, :create, :show] do
     member do
       get "guests/upload"
+      get "guests/done"
     end
   end
+  resources :works, :only => [:create]
+
+
 
   resources :users
 

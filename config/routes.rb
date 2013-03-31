@@ -1,4 +1,6 @@
 Toko::Application.routes.draw do
+  get "session/new", :as => :login
+  get "session/destroy", :as => :logout
   get "welcome/index"
 
   resources :workspaces, :only => [:new, :create, :show] do
@@ -9,9 +11,8 @@ Toko::Application.routes.draw do
   end
   resources :works, :only => [:create]
 
-
-
   resources :users
+  resources :session
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

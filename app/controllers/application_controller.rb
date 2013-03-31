@@ -8,4 +8,9 @@ class ApplicationController < ActionController::Base
   def load_my_workspaces
     @workspaces = Workspace.all
   end
+
+  protected
+  def not_authenticated
+    redirect_to login_path, :alert => "Please login first."
+  end
 end

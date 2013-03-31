@@ -1,0 +1,23 @@
+h1 Guests#upload
+= form_for @work do |f|
+  - if @work.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@work.errors.count, "error")} prohibited this work from being saved:"
+      ul
+        - @work.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :workspace_id
+    = f.hidden_field :workspace_id
+    = @work.workspace.name
+  .field
+    = f.label :file
+    = f.file_field :original
+  .field
+    = f.label :creator
+    = f.text_field :creator
+  .field
+    = f.label :description
+    = f.text_area :description
+  .actions = f.submit 'Save'

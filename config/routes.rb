@@ -1,7 +1,15 @@
 Toko::Application.routes.draw do
+  get "guests/upload"
+  resources :works
+
   get "welcome/index"
 
-  resources :workspaces
+  resources :workspaces do
+    member do
+      get "guests/upload"
+    end
+  end
+
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

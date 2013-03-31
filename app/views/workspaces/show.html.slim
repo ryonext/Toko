@@ -7,6 +7,16 @@ p
   strong Owner:
   = @workspace.owner_id
 
-= link_to 'Edit', edit_workspace_path(@workspace)
-'|
-= link_to 'Back', workspaces_path
+table.table
+  th no
+  th creator
+  th original
+
+  - @workspace.works.each_with_index do |w, i|
+    tr
+      td
+        = i+1
+      td 
+        = w
+      td
+        = w.original

@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  skip_filter :require_login, :load_my_workspaces, :only => [:new, :create]
 
   # GET /users
   # GET /users.json

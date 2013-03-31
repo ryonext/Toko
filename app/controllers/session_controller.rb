@@ -1,12 +1,11 @@
 class SessionController < ApplicationController
-  skip_filter
+  skip_filter :require_login, :load_my_workspaces
   def new
   end
   
   def create
     user = login(params[:username], params[:password],
       params[:remember_me])
-    binding.pry
     if user
       redirect_back_or_to root_url, :notice => "Logged in!"
     else

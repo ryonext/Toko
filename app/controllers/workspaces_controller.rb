@@ -15,6 +15,7 @@ class WorkspacesController < ApplicationController
   # POST /workspaces.json
   def create
     @workspace = Workspace.new(workspace_params)
+    @workspace.owner_id = current_user.id
 
     respond_to do |format|
       if @workspace.save

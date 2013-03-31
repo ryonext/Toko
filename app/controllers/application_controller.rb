@@ -3,10 +3,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_filter :load_my_workspaces
+  before_filter :require_login, :load_my_workspaces
 
   def load_my_workspaces
-    @workspaces = Workspace.all
+    @workspaces = current_user.workspaces
   end
 
   protected
